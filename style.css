@@ -127,8 +127,10 @@
 
   /*----------------HEADER----------------------*/
   .header{
-    background:#2b2b2b;
-    
+    background: black;
+    position:relative;
+    position: fixed;
+    width: 100%;
   }
 
   .header .header__wrapper{
@@ -170,12 +172,83 @@
     color: #ffa700;
   }
 
+  .toggle__menu{
+    display: none;
+  }
+
+
+
+  .toggle__menu span{
+    width: 3rem;
+    height:.3rem;
+    background-color: #ffa700;
+    display: block;
+    margin-top: .5rem;
+    border-radius: 5rem;
+    transition: .5s ease;
+  }
+
+
+@media screen and (max-width:500px) {
+
+  .toggle__menu{
+    display: block;
+  }
+
+  .toggle__menu.open span:first-child{
+    transform: translate(0, 10px) rotate(225deg);
+    transition: .5s ease;
+  }
+  .toggle__menu.open span:nth-child(2){
+    opacity: 0;
+    transition: .5s ease;
+  }
+  .toggle__menu.open span:last-child{
+    transform: translate(0, -7px) rotate(-225deg);
+    transition: .5s ease;
+  }
+
+  .header .header__nav{
+    background: black;
+    position: absolute;
+    top: 10.3rem;
+    right: -100rem;
+    width: 100%;
+    height: 100vh;
+    transition: .5s ease;
+  }
+
+  .header .header__nav.open{
+    right:0;
+    transition: .5s ease;
+  }
+
+  .header .header__nav ul{
+    display:block;
+    text-align: center;
+    
+  }
+  .header .header__nav ul li{
+    padding: 3rem 0;
+    margin-left: 0;
+  }
+  .header .header__nav ul li:hover{
+    background:#2b2b2b;
+    cursor: pointer;
+  }
+  .header .header__nav ul li a{
+    font-size: 3rem;
+  }
+
+}
 
 
   /*-------------BANNER--------------------*/
 
   .banner{
-    padding: 5rem 0;
+    padding-top: 13rem;
+    padding-bottom: 5rem;
+    
   }
 
   .banner .banner__wrapper{
@@ -199,6 +272,28 @@
     margin:3rem 0;
   }
 
+  @media screen and (max-width:500px) {
+    .banner .banner__wrapper{
+      flex-direction: column-reverse;
+    } 
+
+    .banner .banner__text{
+      text-align: center;
+      margin-top: 5rem;
+    }
+
+    .banner .banner__text h1{
+      font-size: 3rem;
+    }
+
+    .banner .banner__text p{
+      text-align: justify;
+    }
+
+    .banner img{
+      width: 25rem;
+    }
+  }
 
   /*--------------------REPEATABLE PATTERNS----------------------------*/
 
@@ -221,6 +316,19 @@
 
   }
 
+  .btn.black{
+    background:#2b2b2b;
+    color:#ffffff;
+    border:1px solid #2b2b2b
+
+  }
+
+  .btn.black:hover{
+    background:#ffffff;
+    color:#2b2b2b;
+    border:1px solid #ffffff;
+
+  }
 
 /*--------------------------HM-SERVICES-------------------------------*/
 
@@ -262,7 +370,21 @@
     border:1px solid #ffffff;
 }
 
-/*------------------------------ABOUT ME----------------------------------*/
+@media screen and (max-width:500px) {
+
+  .hm-services .hm-services__wrapper{
+    flex-direction: column;
+  }
+
+  .hm-services .hm-services__item{
+    margin: 0 auto;
+  }
+  .hm-services .hm-services__item:nth-child(2){
+    margin: 10rem auto;
+  }
+  
+}
+/*------------------------------HM-ABOUT----------------------------------*/
 
 .about{
     padding: 5rem 0;
@@ -293,6 +415,29 @@
     margin: 2rem 0;
 }
 
+@media screen and (max-width:500px) {
+
+  .about .about__wrapper{
+    flex-direction: column;
+  }
+
+  .about .about__text{
+      text-align: center;
+      margin-top: 5rem;
+    
+  }
+  .about .about__text h2{
+    font-size: 3rem;
+  }
+  .about .about__text p{
+    text-align: justify;
+  }
+
+  .about .about__wrapper img{
+    width:25rem;
+  }
+  
+}
 
 /*----------------------HM-TRENDS-------------------------------*/
 .hm-trends{
@@ -341,12 +486,338 @@
     grid-gap: 5rem;
 }
 
+@media screen and (max-width:500px) {
+
+  .hm-trends .hm-trends__wrapper{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    grid-gap: 5rem;
+  }
+
+  .hm-trends .hm-trends__title{
+    text-align: center;
+  }
+
+.hm-trends .hm-trends__card__text{
+  margin-top: 1rem;
+  
+}
+
+.hm-trends .hm-trends__card__text h4{
+  font-size: 3rem;
+}
+
+
+.hm-trends .hm-trends__card__text p {
+  text-align: justify;
+}
+.hm-trends img{
+  width: 25rem;
+}
+  
+}
+
 
 /*----------------------------CONTACT BANNER--------------------------*/
 .hm-contact{
     padding: 5rem 0;  
+    background:#ffa700;
+}
 
+.hm-contact .hm-contact__wrapper{
+  align-items: center;
+  text-align: center;
+}
+
+.hm-contact .hm-contact__wrapper h2{
+    color: #2b2b2b;
+    font-size: 4rem;
+    font-weight: 600;
+}
+.hm-contact .hm-contact__wrapper p{
+    padding: 2rem;
+}
+
+/*---------------------------FOOTER-------------------------------------*/
+
+.footer{
+  padding: 1rem 0;
+  background: #2b2b2b;
+}
+
+.footer .footer__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer  .footer__wrapper__details li{
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.footer  .footer__wrapper__details i{
+  color:#ffffff;
+  font-size: 2.5rem;
+}
+
+.footer .footer__wrapper__details ul li a i:hover{
+  color: #ffa700;
+}
+
+@media screen and (max-width:500px) {
+
+  .footer .footer__wrapper{
+    display: block;
+    align-items: center;
+    
+  }
+  .footer .footer__wrapper p{
+    text-align: center;
+    font-size: 1.2rem; 
+    margin: 2rem 0;
+  }
+
+  .footer .footer__wrapper__details i{
+    font-size: 2rem;
+  }
+  .footer .footer__wrapper__details ul{
+    text-align: center;
+  }
+
+  
+}
+/*-----------------------------ABOUT------------------------------------*/
+.aboutme{
+  padding-top: 13rem;
+  padding-bottom: 5rem;
 }
 
 
+.aboutme .aboutme__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.aboutme .aboutme__intro h1{
+
+  color: #ffa700;
+  font-size: 6rem;
+  font-weight: 600;
+
+}
+.aboutme .aboutme__intro h3{
+  margin-top: 7rem;
+  font-size: 2rem;
+}
+.aboutme .aboutme__intro p{
+
+  max-width: 70rem; 
+  text-align: justify;
+  margin: 2rem 0;
+}
+
+.aboutme .aboutme__wrapper ul{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 25rem;
+}
+
+.aboutme ul{
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.aboutme ul li a{
+  color: #ffa700;
+}
+
+.aboutme .aboutme__wrapper i{
+  color: #ffa700;
+  font-size: 2.8rem;
+}
+
+.aboutme .aboutme__wrapper ul li a i:hover{
+  color:black;
+}
+
+@media screen and (max-width:500px) {
+
+  .aboutme .aboutme__wrapper{
+    flex-direction: column-reverse;
+  }
+
+
+  .aboutme .aboutme__intro{
+    text-align: center;
+    max-width: 40rem;
+  
+  }
+  .aboutme .aboutme__intro h1{
+    font-size: 3rem;
+  
+  }
+  .aboutme .aboutme__intro h3{
+    font-size: 2rem;
+  
+  }
+  .aboutme .aboutme__intro p{
+    text-align: justify;
+  }
+
+  .aboutme .aboutme__intro ul{
+    
+    margin: 0 auto;
+    
+  }
+}
+/*--------------------------------ABT RECENT PROJECTS---------------------------------*/
+.projects{
+  padding: 5rem 0;
+  background: black;
+}
+
+.projects .projects__text h2{
+  color: #ffa700;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.projects .projects__text p{
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.projects .projects__card{
+  background:#ffffff;
+  border-radius: 2rem;
+  
+}
+
+.projects .projects__text p{
+  margin: 2rem 0;
+}
+
+.projects .projects__card img{
+  width: 100%;
+}
+.projects .projects__card .projects__card__text{
+  padding: 2rem;
+}
+.projects .projects__card .projects__card__text h4{
+  color:#ffa700;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.projects .projects__card .projects__card__text p{
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.projects .projects__card .projects__card__text a{
+  color: #ffa700;
+}
+
+.projects .projects__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+@media screen and (max-width:500px) {
+
+  .projects .projects__wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+  }
+
+  
+}
+
+/*----------------------------------ABT CONTACT BANNER----------------------------------*/
+
+.abt-contact{
+  padding: 5rem 0;  
+  background:#ffa700;
+}
+
+.abt-contact .abt-contact__wrapper{
+align-items: center;
+text-align: center;
+}
+
+.abt-contact .abt-contact__wrapper h2{
+  color: #2b2b2b;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.abt-contact .abt-contact__wrapper p{
+  padding: 2rem;
+}
+
+/*-------------------------------------ABT FOOTER-----------------------------------*/
+
+.abt-footer{
+  padding: 1rem 0;
+  background: #222222;
+}
+
+.abt-footer .abt-footer__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.abt-footer  .abt-footer__wrapper__details li{
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.abt-footer  .abt-footer__wrapper__details i{
+  color:#ffffff;
+  font-size: 2.5rem;
+}
+
+.abt-footer .abt-footer__wrapper__details ul li a i:hover{
+  color: #ffa700;
+}
+
+
+/*------------------------------------------ABT-FOOTER----------------------------*/
+@media screen and (max-width:500px) {
+
+  .abt-footer .abt-footer__wrapper{
+    display: block;
+    align-items: center;
+    
+  }
+  .abt-footer .abt-footer__wrapper p{
+    text-align: center;
+    font-size: 1.2rem; 
+    margin: 2rem 0;
+  }
+
+  .abt-footer .abt-footer__wrapper__details i{
+    font-size: 2rem;
+  }
+  .abt-footer .abt-footer__wrapper__details ul{
+    text-align: center;
+  }
+
+  
+}
