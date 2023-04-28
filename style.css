@@ -690,18 +690,18 @@
   color: #ffa700;
   font-size: 4rem;
   font-weight: 600;
-  text-align: center;
+  
 }
 
 .projects .projects__text p{
   margin-top: 2rem;
   color: white;
-  text-align: center;
+  
 }
 
 .projects .projects__card{
   background:#ffffff;
-  border-radius: 2rem;
+  border-radius: 3rem;
   
 }
 
@@ -740,6 +740,25 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5rem;
+    padding: 2rem;
+  }
+  .projects .projects__text h2{
+    color: #ffa700;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .projects .projects__text p{
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .projects .projects__card{
+    background:#ffffff;
+    border-radius: 3rem;
+    
   }
 
   
@@ -797,8 +816,6 @@ text-align: center;
   color: #ffa700;
 }
 
-
-/*------------------------------------------ABT-FOOTER----------------------------*/
 @media screen and (max-width:500px) {
 
   .abt-footer .abt-footer__wrapper{
@@ -820,4 +837,165 @@ text-align: center;
   }
 
   
+}
+
+
+
+/*-------------------------------SERVICES---------------------------------*/
+
+.services{
+  padding-top: 13rem;
+  padding-bottom: 5rem;
+}
+
+
+.services .content{
+  display: flex ;
+  justify-content: space-between;
+  padding: 2rem 0;
+  max-width:140rem;
+  margin:0 auto;
+  padding: 1.5rem;
+}
+
+.services .offer__list:nth-child(2){
+  background: black;
+}
+.services .offer__list:nth-child(2) p{
+  color: #ffffff;
+}
+.services .offer__list:nth-child(2) h4{
+  color: #ffffff;
+}
+
+.services .offer__list h1{
+  color: #ffa700;
+  max-width: 60rem;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 6rem;
+}
+
+.services .offer__list p{
+  text-align: justify;
+  max-width: 72rem;
+  margin: 2rem 0;
+} 
+.services .offer__list i{
+  font-size: 3rem;
+  color: #ffa700;
+} 
+
+.services .arrow__down{
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.services ul li a i{
+  font-size: 2.5rem;
+  color: #ffa700;
+}
+
+.services .services__wrapper .price h3{
+  color: #ffa700;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.services .services__wrapper .price p{
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: .3rem;
+}
+
+.services .offer__list img{
+  margin: 0 auto;
+}
+
+@media screen and (max-width:500px) {
+
+  .services .content{
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .services .offer__list h1{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .services .offer__list p{
+
+    text-align: justify;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .services .content img{
+    width:25rem;
+  }
+  .services .services__wrapper .price h3{
+    color: #ffa700;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .services .services__wrapper .price h4{
+    text-align: center;
+  }
+
+  .services .offer__list:nth-child(2) img{
+    order:1;
+  }
+
+  .services .services__wrapper .price p{
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: .3rem;
+    text-align: center;
+  }
+}
+
+/*----------------------------SVC-CONTACT BANNER-----------------------------------*/
+
+.svc-contact{
+  padding: 5rem 0;  
+  background:#ffa700;
+}
+
+.svc-contact .svc-contact__wrapper{
+align-items: center;
+text-align: center;
+}
+
+.svc-contact .svc-contact__wrapper h2{
+  color: #2b2b2b;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.svc-contact .svc-contact__wrapper p{
+  padding: 2rem;
+}
+
+
+/* ----------------------------UP-UPDATES----------------------------------- */
+
+.up-updates .up-updates__wrapper{
+  padding-top: 13rem;
+  padding-bottom: 5rem;
+}
+
+.up-updates .up-updates__wrapper h1{
+  font-size: 4rem;
+  font-weight: 600;
+  color: #ffa700;
+}
+
+.up-updates .up-updates__wrapper ul{
+  display: flex;
+  justify-content: space-between;
+  max-width: 4rem;
 }
