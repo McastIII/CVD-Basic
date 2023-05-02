@@ -132,7 +132,7 @@ img {
 /*----------------HEADER----------------------*/
 
 .header {
-    background: black;
+    background: #222222;
     position: relative;
     position: fixed;
     width: 100%;
@@ -317,7 +317,7 @@ img {
     border: 1px solid #222222;
 }
 .btn.white {
-    background: #ffffff;
+    background: transparent;
     color: #222222;
     border: 1px solid #222222;
 }
@@ -556,23 +556,25 @@ img {
     align-items: center;
     justify-content: space-between;
     margin: 2rem 0;
-    color: #ffffff;
+    color: gray;
     font-weight: 600;
 }
 
 .footer .footer__wrapper__details li {
     display: inline-block;
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
+
 .footer .footer__wrapper__details i {
-    color: #ffffff;
+    color: gray;
     font-size: 2.5rem;
 }
 
 .footer .footer__wrapper__details ul li a i:hover {
     color: #ffa700;
+
 }
 
 @media screen and (max-width:500px) {
@@ -789,7 +791,7 @@ img {
     align-items: center;
     justify-content: space-between;
     margin: 2rem 0;
-    color: #ffffff;
+    color: gray;
     font-weight: 600;
 }
 
@@ -800,7 +802,7 @@ img {
 }
 
 .abt-footer .abt-footer__wrapper__details i {
-    color: #ffffff;
+    color: gray;
     font-size: 2.5rem;
 }
 
@@ -975,7 +977,8 @@ img {
 }
 
 .up-updates .recent__post h2 {
-    margin-top: 13rem; 
+    margin-top: 13rem;
+    margin-bottom: 2rem; 
     font-size: 3rem;
     font-weight: 600;
     color: #ffa700;
@@ -999,8 +1002,7 @@ img {
 
 .up-updates .up-updates__wrapper{
     display: grid;
-    grid-template-columns: 2.5fr 1.1fr;
-    grid-gap: 5rem;
+    grid-template-columns: 2.2fr 1.1fr;
     padding-bottom: 5rem;
 }
 
@@ -1036,7 +1038,7 @@ img {
 .up-updates .up-updates__wrapper__trends ul {
     display: flex;
     justify-content: space-between;
-    max-width: 60rem;
+   margin-right: 1rem;
 }
 
 .up-updates .trends__concept{
@@ -1051,7 +1053,6 @@ img {
 
 .up-updates .recent__post h4{
     text-align: left;
-    margin-left: 2rem;
 }
 
 
@@ -1084,7 +1085,8 @@ img {
     margin-left: 2rem;
 }
 
-.up-updates .content p{
+.up-updates .content h4{
+    margin-top: 1.8rem;
     font-weight: 600;
     text-align: justify;
 }
@@ -1143,10 +1145,18 @@ img {
         font-size: 1.2rem;
     }
 
+    .up-updates .categories__title{
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
 
     .up-updates .recent__post h2{
         margin-top: 4rem;
         margin-bottom: 2rem;
+    }
+    .up-updates .recent__post h4{
+        text-align: left;
+        margin-left: 2rem;
     }
 
     .up-updates .tags h2{
@@ -1172,8 +1182,8 @@ img {
 
 
 .cnt-contacts{
-    padding-top: 15rem;
-    padding-bottom: 5rem;
+    padding-top: 13rem;
+    padding-bottom: 7rem;
     background: #222222;
     border-bottom: 2px solid #d3d3d3;
   }
@@ -1184,8 +1194,15 @@ img {
     grid-gap: 15rem;
   }
 
+.cnt-contacts .cnt-contact__details{
+    margin-left: 1rem;
+}
+.cnt-contacts .container h2{
+    margin-left: 1rem;
+}
+
   .cnt-contacts .cnt-contacts__wrapper p{
-   color: ffffff;
+   color: #ffffff;
   }
 
   .cnt-contacts .container h2{
@@ -1202,7 +1219,7 @@ img {
 
 
   .cnt-contacts .contacts{
-    margin: 4rem auto;
+    margin: 6.1rem auto;
   }
   .cnt-contacts .contacts p{
     display: inline;
@@ -1213,7 +1230,7 @@ img {
   .cnt-contacts .contacts i{
     color: #ffa700;
     font-size: 25px;
-    margin-right: 5rem;
+    margin-right: 3rem;
   }
 
   .cnt-contacts .social__media ul{
@@ -1243,6 +1260,9 @@ img {
     .cnt-contacts .cnt-contact__form #name{
     background-color: #d9d9d9;
     margin-bottom: 1.5rem;
+    }
+    .cnt-contacts .cnt-contact__form textarea{
+    resize: none;
     }
     
     .cnt-contacts .cnt-contact__form #email, #msg{
@@ -1278,21 +1298,26 @@ img {
         }
         
         .cnt-contacts .social__media ul{
-        justify-content: center;
+            justify-content: center;
         }
     
         .cnt-contacts .container h2{
         font-size: 3rem;
         text-align: center;
         }
-        .cnt-contacts .container p{
+        .cnt-contacts .cnt-contact__details p{
         text-align: justify;
         }
-    
 
-        .cnt-contacts .description{
-        text-align: center;
-        margin-bottom: 5rem;
+        .cnt-contacts .contacts i{
+        margin-right: 2.5rem;
+        }
+        .cnt-contacts .contacts {
+        display: flex;
+        align-items: center;
+        }
+        .cnt-contacts .contacts p{
+        text-align: left;
         }
     
         .cnt-contacts .cnt-contact__form .submit__button{
